@@ -1,4 +1,4 @@
-module eristique-1/lib_httpclient
+module github.com/igomonov88/lib_httpclient
 
 go 1.17
 
