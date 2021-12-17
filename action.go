@@ -5,6 +5,10 @@ import (
 	"net/http"
 )
 
+func RequestWithAction(req *http.Request, action string) *http.Request {
+	return req.WithContext(ContextWithAction(req.Context(), action))
+}
+
 func ContextWithAction(ctx context.Context, action string) context.Context {
 	return context.WithValue(ctx, contextKeyAction, action)
 }
